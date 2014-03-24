@@ -10,5 +10,7 @@
 
 @interface KKTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *timeLineLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *tlImageView;
 
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @end

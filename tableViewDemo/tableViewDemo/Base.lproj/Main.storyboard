@@ -8,37 +8,61 @@
         <scene sceneID="mIC-0c-yxR">
             <objects>
                 <tableViewController storyboardIdentifier="KKTableViewController" id="tQS-Xv-gFf" customClass="KKTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iaO-Id-eRP">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="191" sectionHeaderHeight="22" sectionFooterHeight="22" id="iaO-Id-eRP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="KKTableViewCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="KKTableViewCell" id="rxr-Uy-oEh" customClass="KKTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="KKTableViewCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="KKTableViewCell" rowHeight="191" id="rxr-Uy-oEh" customClass="KKTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="191"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rxr-Uy-oEh" id="Vnr-YE-YIe">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="42P-h6-Rbg">
-                                            <rect key="frame" x="5" y="5" width="310" height="33"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="撒旦发的啥发的发的啥发的烦烦烦烦烦撒发生发发发发收到发发萨法沙发上发发方法" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="42P-h6-Rbg">
+                                            <rect key="frame" x="5" y="126" width="310" height="59"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.27841835458806596" green="0.90408709194940051" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title-dfddsdfdsfdsfffff方法多少分打算发的啥发生的发的发生的反反复复fffaffgfdg谁说的发的啥发的啥发的啥" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="5aI-b9-RJB">
+                                            <rect key="frame" x="5" y="5" width="310" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.73018523185483875" green="0.62191280241935487" blue="0.64575982862903225" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8SU-tW-Wmr">
+                                            <rect key="frame" x="78" y="58" width="160" height="66"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="66" id="BQP-Wc-yoZ"/>
+                                                <constraint firstAttribute="width" constant="160" id="WrO-N9-Kzp"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.8700247766559791" green="0.6844578673921945" blue="0.87612516983695654" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="42P-h6-Rbg" firstAttribute="leading" secondItem="Vnr-YE-YIe" secondAttribute="leading" constant="5" id="0ge-rH-bUx"/>
                                         <constraint firstAttribute="trailing" secondItem="42P-h6-Rbg" secondAttribute="trailing" constant="5" id="GyC-vg-A3w"/>
                                         <constraint firstAttribute="bottom" secondItem="42P-h6-Rbg" secondAttribute="bottom" constant="5" id="TJf-3M-Puv"/>
-                                        <constraint firstItem="42P-h6-Rbg" firstAttribute="top" secondItem="Vnr-YE-YIe" secondAttribute="top" constant="5" id="vMA-tS-8G0"/>
+                                        <constraint firstItem="42P-h6-Rbg" firstAttribute="top" secondItem="8SU-tW-Wmr" secondAttribute="bottom" constant="2" id="WUm-PM-oRn"/>
+                                        <constraint firstItem="5aI-b9-RJB" firstAttribute="leading" secondItem="Vnr-YE-YIe" secondAttribute="leading" constant="5" id="Yfi-q7-LSj"/>
+                                        <constraint firstItem="8SU-tW-Wmr" firstAttribute="top" secondItem="5aI-b9-RJB" secondAttribute="bottom" constant="2" id="ZCM-Ji-UVT"/>
+                                        <constraint firstItem="8SU-tW-Wmr" firstAttribute="leading" secondItem="Vnr-YE-YIe" secondAttribute="leading" constant="78" id="azL-gO-NcE"/>
+                                        <constraint firstItem="5aI-b9-RJB" firstAttribute="top" secondItem="Vnr-YE-YIe" secondAttribute="top" constant="5" id="dma-QO-zxe"/>
+                                        <constraint firstAttribute="trailing" secondItem="5aI-b9-RJB" secondAttribute="trailing" constant="5" id="e8M-zH-nWj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="timeLineLabel" destination="42P-h6-Rbg" id="ogx-GF-bEi"/>
+                                    <outlet property="titleLabel" destination="5aI-b9-RJB" id="lMz-7H-zcw"/>
+                                    <outlet property="tlImageView" destination="8SU-tW-Wmr" id="3YT-r3-teA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
