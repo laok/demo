@@ -1,50 +1,66 @@
 //
-//  KKFirstViewController.m
+//  ZoneSendTypeSelectViewController.m
 //  popmenu
 //
-//  Created by zhaokai on 14-6-17.
+//  Created by zhaokai on 14-6-18.
 //  Copyright (c) 2014年 kk. All rights reserved.
 //
 
-#import "KKFirstViewController.h"
+#import "ZoneSendTypeSelectViewController.h"
 #import "ZonePopMenu.h"
-
-@interface KKFirstViewController ()
-- (IBAction)openMenu:(id)sender;
-
+@interface ZoneSendTypeSelectViewController ()<ZonePopMenuDelegate>
+@property (nonatomic,strong)UIImage* bgImage;
 @end
 
-@implementation KKFirstViewController
+@implementation ZoneSendTypeSelectViewController
 
+#pragma mark - delegate
+-(void)closeMenu
+{
+    [self backAction];
+}
+#pragma mark - init
+- (id)initWithBgImage:(UIImage*)image;
+{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    self.bgImage = image;
+    
+    return self;
+}
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+-(void)backAction
+{
+    if (self.navigationController && [self.navigationController.viewControllers count]>1) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else if(self.presentingViewController)
+    {
+        [self dismissViewControllerAnimated:NO completion:nil];
+//        self.parentViewController.view.alpha = 0.0;
+//        [UIView animateWithDuration:1.25
+//                         animations:^{self.parentViewController.view.alpha  = 1.0;}];
+    }
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor grayColor];
-    UIImageView* bgImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
-    bgImageView.image=[UIImage imageNamed:@"temp"];
-    [self.view addSubview:bgImageView];
-    
-    UIButton* openButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    openButton.frame = CGRectMake(200, 200, 60, 60);
-    [openButton addTarget:self action:@selector(openMenu:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:openButton];
-    [openButton setTitle:@"open" forState:UIControlStateNormal];
-    openButton.backgroundColor = [UIColor blackColor];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)openMenu:(id)sender {
+    // Do any additional setup after loading the view.
     ZonePopMenu* menu = [[ZonePopMenu alloc]initWithFrame:self.view.bounds];
+    menu.delegate = self;
     menu.backgroundColor=[[UIColor redColor]colorWithAlphaComponent:0.4];
     NSInteger itemCount = random()%3+1;
-//    NSLog(@"%d",itemCount);
-//    [self.view addSubview:menu];
+    //    NSLog(@"%d",itemCount);
+    //    [self.view addSubview:menu];
 #if 0
     if (itemCount) {
         itemCount--;
@@ -59,7 +75,7 @@
             NSLog(@"renren click");
         }];
     }
-
+    
     if (itemCount) {
         itemCount--;
         [menu addMenuItemWithTitle:@"推特" titleColor:[UIColor blueColor] andIcon:[UIImage imageNamed:@"twitter_popover"] andSelectedBlock:^{
@@ -88,12 +104,26 @@
     }];
 #endif
     
-    UIImage* bgImage = [ZonePopMenu createBgImage:self.view];
-    [menu showMenu:bgImage];
+    UIImage* bgImage = self.bgImage;//[ZonePopMenu createBgImage:self.view];
+//    [menu showMenu:bgImage];
+    [menu showMenu:bgImage inView:self.view];
 }
 
--(void)backAction
+- (void)didReceiveMemoryWarning
 {
-
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
 @end
