@@ -30,6 +30,7 @@
 		5C4C6D81195185E100B5BD12 /* videobutton_selecttype_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C6D6D195185E100B5BD12 /* videobutton_selecttype_press@2x.png */; };
 		5C4C6D82195185E100B5BD12 /* videobutton_selecttype.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C6D6E195185E100B5BD12 /* videobutton_selecttype.png */; };
 		5C4C6D83195185E100B5BD12 /* videobutton_selecttype@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C6D6F195185E100B5BD12 /* videobutton_selecttype@2x.png */; };
+		5C5D73E31952E66900699B5E /* UIBorderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D73E21952E66900699B5E /* UIBorderLabel.m */; };
 		5CA5C60A19504B1600EF22E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA5C60919504B1600EF22E2 /* Foundation.framework */; };
 		5CA5C60C19504B1600EF22E2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA5C60B19504B1600EF22E2 /* CoreGraphics.framework */; };
 		5CA5C60E19504B1600EF22E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA5C60D19504B1600EF22E2 /* UIKit.framework */; };
@@ -83,6 +84,8 @@
 		5C4C6D6D195185E100B5BD12 /* videobutton_selecttype_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videobutton_selecttype_press@2x.png"; sourceTree = "<group>"; };
 		5C4C6D6E195185E100B5BD12 /* videobutton_selecttype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videobutton_selecttype.png; sourceTree = "<group>"; };
 		5C4C6D6F195185E100B5BD12 /* videobutton_selecttype@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videobutton_selecttype@2x.png"; sourceTree = "<group>"; };
+		5C5D73E11952E66900699B5E /* UIBorderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBorderLabel.h; sourceTree = "<group>"; };
+		5C5D73E21952E66900699B5E /* UIBorderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBorderLabel.m; sourceTree = "<group>"; };
 		5CA5C60619504B1600EF22E2 /* popmenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = popmenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA5C60919504B1600EF22E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CA5C60B19504B1600EF22E2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -179,6 +182,8 @@
 				5CA5C61019504B1600EF22E2 /* Supporting Files */,
 				5C1F1C2A1951658F00AEB61E /* ZoneSendTypeSelectViewController.h */,
 				5C1F1C2B1951658F00AEB61E /* ZoneSendTypeSelectViewController.m */,
+				5C5D73E11952E66900699B5E /* UIBorderLabel.h */,
+				5C5D73E21952E66900699B5E /* UIBorderLabel.m */,
 			);
 			path = popmenu;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA5C62319504B1600EF22E2 /* KKSecondViewController.m in Sources */,
+				5C5D73E31952E66900699B5E /* UIBorderLabel.m in Sources */,
 				5CA5C62019504B1600EF22E2 /* KKFirstViewController.m in Sources */,
 				5C1F1C2C1951658F00AEB61E /* ZoneSendTypeSelectViewController.m in Sources */,
 				5CA5C61A19504B1600EF22E2 /* KKAppDelegate.m in Sources */,

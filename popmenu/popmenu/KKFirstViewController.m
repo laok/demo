@@ -8,6 +8,7 @@
 
 #import "KKFirstViewController.h"
 #import "ZonePopMenu.h"
+#import "UIBorderLabel.h"
 
 @interface KKFirstViewController ()
 - (IBAction)openMenu:(id)sender;
@@ -21,6 +22,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor grayColor];
+#if 0
     UIImageView* bgImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
     bgImageView.image=[UIImage imageNamed:@"temp"];
     [self.view addSubview:bgImageView];
@@ -31,6 +33,16 @@
     [self.view addSubview:openButton];
     [openButton setTitle:@"open" forState:UIControlStateNormal];
     openButton.backgroundColor = [UIColor blackColor];
+#else
+    UIBorderLabel *myBorderLabel = [[UIBorderLabel alloc] initWithFrame:CGRectMake(0, 200, 320, 22)];
+    [self.view addSubview:myBorderLabel];
+    myBorderLabel.text=@"345";
+    myBorderLabel.textAlignment = NSTextAlignmentRight;
+    myBorderLabel.font =[UIFont systemFontOfSize:12.f];
+    myBorderLabel.backgroundColor = [[UIColor redColor]colorWithAlphaComponent:0.4];
+    myBorderLabel.contentEdgeInsets =UIEdgeInsetsMake(5, 0, 5, 15);
+    
+#endif
 }
 
 - (void)didReceiveMemoryWarning
