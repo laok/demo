@@ -1,0 +1,8 @@
+platform :osx, '10.7'
+=begin
+1.单行注释 #
+2.多行注释 =begin 开始, =end 结束
+=end
+#图片缓存
+#pod 'SDWebImage', '~> 3.5.6'
+pod 'AFNetworking', '~> 2.3.1'
