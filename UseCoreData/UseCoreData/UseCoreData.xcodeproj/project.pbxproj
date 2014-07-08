@@ -25,6 +25,7 @@
 		5CAA348C19696320009FAA89 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA348A19696320009FAA89 /* Model.xcdatamodeld */; };
 		5CAA3490196965E1009FAA89 /* KKModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA348F196965E1009FAA89 /* KKModelManager.m */; };
 		5CAA349219696616009FAA89 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAA349119696616009FAA89 /* CoreData.framework */; };
+		5CAE814E196A90E100DC8EBA /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE814D196A90E100DC8EBA /* Entity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		5CAA348E196965E1009FAA89 /* KKModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKModelManager.h; sourceTree = "<group>"; };
 		5CAA348F196965E1009FAA89 /* KKModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKModelManager.m; sourceTree = "<group>"; };
 		5CAA349119696616009FAA89 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5CAE814C196A90E100DC8EBA /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		5CAE814D196A90E100DC8EBA /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				5CAA346A1969616C009FAA89 /* Images.xcassets */,
 				5CAA348A19696320009FAA89 /* Model.xcdatamodeld */,
 				5CAA34561969616C009FAA89 /* Supporting Files */,
+				5CAE814C196A90E100DC8EBA /* Entity.h */,
+				5CAE814D196A90E100DC8EBA /* Entity.m */,
 			);
 			path = UseCoreData;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAE814E196A90E100DC8EBA /* Entity.m in Sources */,
 				5CAA34691969616C009FAA89 /* KKSecondViewController.m in Sources */,
 				5CAA3490196965E1009FAA89 /* KKModelManager.m in Sources */,
 				5CAA34661969616C009FAA89 /* KKFirstViewController.m in Sources */,
@@ -485,6 +491,7 @@
 				5CAA34831969616C009FAA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CAA34841969616C009FAA89 /* Build configuration list for PBXNativeTarget "UseCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +500,7 @@
 				5CAA34861969616C009FAA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
