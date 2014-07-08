@@ -7,12 +7,28 @@
 //
 
 #import "KKAppDelegate.h"
-
 @implementation KKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+//    NSString* udid= [SSOpenUDID value];
+    
+    /*
+    UIPasteboard *appPasteBoard = [UIPasteboard pasteboardWithName:@"CopyPaste" create:YES];
+    appPasteBoard.persistent = YES;
+    NSString* test =@"testdsfsdfsdf";
+    NSData* o = [NSKeyedArchiver archivedDataWithRootObject:test];
+
+    [appPasteBoard setData:o forPasteboardType:@"com.youcompany.xx.xx"];
+    
+    
+    UIPasteboard *appPasteBoard1 = [UIPasteboard pasteboardWithName:@"CopyPaste" create:YES];
+    NSData *data = [appPasteBoard1 dataForPasteboardType:@"com.youcompany.xx.xx"];
+    NSString *s =[NSKeyedUnarchiver unarchiveObjectWithData:data];
+     */
+    
     return YES;
 }
 							
