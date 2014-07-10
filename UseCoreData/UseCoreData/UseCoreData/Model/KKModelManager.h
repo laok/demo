@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+typedef void(^OptionBlock)(NSError* error);
+
+
 @interface KKModelManager : NSManagedObjectContext
+
++ (instancetype)sharedInstance;
+
+- (NSManagedObjectContext *)createPrivateQueueMOC;
+-(NSManagedObjectContext*)mainMOC;
+-(NSError*)save:(OptionBlock)handler;
 
 @end

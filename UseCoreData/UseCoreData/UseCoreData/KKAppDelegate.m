@@ -7,6 +7,7 @@
 //
 
 #import "KKAppDelegate.h"
+#import "Entity.h"
 
 @implementation KKAppDelegate
 @synthesize managedObjectContext = _managedObjectContext;
@@ -15,17 +16,48 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self test];
-    });
+//    [self test];
     return YES;
 }
 -(void)test
 {
     //test
     NSLog(@"test start");
-    NSManagedObjectContext* context = self.managedObjectContext;
+    
+ NSManagedObjectContext* context = self.managedObjectContext;
+#if 0
+    for (int i=0; i<20; i++) {
+        Entity* newEntity = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:context];
+        newEntity.title =@"tess2td";
+        newEntity.task_id=@(1004+i);
+        newEntity.detail = @"do 2some thing1";
+        newEntity.done = @(YES);//[NSNumber numberWithBool:YES];
+    }
+
+    BOOL changes = [self.managedObjectContext hasChanges];
+    if (changes) {
+        [self.managedObjectContext save:nil];
+    }
+#endif
+    
+    
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Entity"];
+    [request setReturnsObjectsAsFaults:NO];
+    request.fetchLimit = 7;
+    [request setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"task_id" ascending:YES]]];
+    NSPredicate* predicate = [request predicate];
+    NSError *error;
+    NSArray *dataArray = [context executeFetchRequest:request error:&error];
+    for (Entity* entity in dataArray) {
+        NSLog(@"%d,%@",[entity.task_id integerValue],entity.title);
+    }
+    NSLog(@"new fetch:");
+    request.fetchOffset =7;
+    dataArray = [context executeFetchRequest:request error:&error];
+    for (Entity* entity in dataArray) {
+        NSLog(@"%d,%@",[entity.task_id integerValue],entity.title);
+    }
     
     NSLog(@"test end");
 }
@@ -50,9 +82,9 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"UseCoreData" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+//    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     return _managedObjectModel;
 }
 
@@ -61,8 +93,20 @@
     if (_persistentStoreCoordinator!=nil) {
         return _persistentStoreCoordinator;
     }
+    
+    NSURL* storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"test.sqlite"];
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:[self managedObjectModel]];
+    NSError *err = nil;
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&err]) {
+        NSLog(@" unsolved err:%@,%@",err,[err userInfo]);
+        abort();
+    }
+    
     return _persistentStoreCoordinator;
+}
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 #pragma mark -
 - (void)applicationWillResignActive:(UIApplication *)application
